@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="theme-color" content="#BC8887" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>XV Años de Victoria</title>
+
+    <meta property="og:title" content="Mis XV - Victoria">
+    <meta property="og:description"
+        content="Un mundo lleno de ilusiones, sueños por cumplir y emociones compartidas. Hoy doy un paso importante que marcará un antes y un después en mi vida, y nada me haría más feliz que contar con tu presencia en este momento inolvidable.">
+    <meta property="og:locale" content="id_ID" />
+    <meta property="og:image" content="https://sherly.dae.ng/image/sherly-daeng-wedding-thumbnail.png">
+    <meta property="og:url" content="http://sherly.dae.ng/index.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- Bulma Version 0.8.x-->
+    <link rel="stylesheet" href="https://unpkg.com/bulma@0.8.0/css/bulma.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/bulma-tooltip@0.1.5/dist/bulma-tooltip.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/menikah.css" />
+    <link rel="stylesheet" type="text/css" href="css/jquery.countdown.css" />
+    <script src="https://kit.fontawesome.com/2828f7885a.js"
+        integrity="sha384-WAsFbnLEQcpCk8lM1UTWesAf5rGTCvb2Y+8LvyjAAcxK1c3s5c0L+SYOgxvc6PWG"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="js/jquery.coundown.js"></script>
+    <link rel="icon" type="image/png" href="image/favicon.png" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23064379-20"></script>
+    <!-- Begin Script for Countdown -->
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'UA-23064379-20');
+    </script>
+    <!-- Begin Script for Countdown -->
+
+    <!-- Github Button -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+</head>
+
+<div class="modal" id="confirmModal">
+  <div class="modal-background" onclick="closeModal()"></div>
+
+  <div class="modal-card" style="
+    width: 420px;
+    max-width: 100%;
+    border-radius: 50%;
+    border: 3px dotted #996E6D;
+    background-color: #fffafc;
+    margin: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+    overflow: visible;
+    aspect-ratio: 1;
+  ">
+    <!-- Imagen decorativa -->
+    <div style="position: absolute; height: 130%; width: 130%; left: -18%;">
+      <img src="image/divider-lila.png" alt="Decoración Lateral" style="
+        object-fit: contain;
+        opacity: 0.95;
+        pointer-events: none;
+        z-index: 1;
+      ">
+    </div>
+
+    <!-- Encabezado -->
+    <div style="
+      font-size: 3.5rem;
+      font-family: 'Rouge Script', cursive;
+      color: #996E6D;
+      z-index: 2;
+    ">Mis XV</div>
+
+    <p style="font-size: 1.25rem; font-weight: 600; color: #5e4c5c; z-index: 2;">
+      Confirmación de asistencia
+    </p>
+
+    <p style="font-size: 0.95rem; color: #6e5d6c; margin-bottom: 0.5rem; z-index: 2;">
+      Gracias por ser parte de este momento tan especial 💜<br>
+      ¿Puedes acompañarme en este día inolvidable?
+    </p>
+
+    <!-- Indicaciones para acompañantes -->
+    <p style="font-size: 0.85rem; color: #7c6c7b; margin-bottom: 1rem; z-index: 2;">
+      Si vas con acompañante, ¡indícalo en el mensaje! 👥
+    </p>
+
+    <div id="dynamicOptions" style="z-index: 2;"></div>
+
+    <!-- Botón WhatsApp -->
+    <div style="margin-top: 1rem; display: flex; justify-content: center; z-index: 2;">
+      <a href="https://wa.me/573124170515?text=Hola%20%F0%9F%91%8B%2C%20quiero%20confirmar%20mi%20asistencia%20a%20los%20XV%20%F0%9F%A5%B3.%0A%0AY%20te%20cuento%20si%20voy%20con%20acompa%C3%B1ante%3A%0A-%0AGracias.%20%F0%9F%92%9C"
+        target="_blank"
+        class="button confirm-button">
+        <i class="fab fa-whatsapp"></i> Confirmar
+        </a>
+
+    </div>
+  </div>
+</div>
+
+
+
+<body>
+    <audio id="background-audio" loop autoplay muted>
+        <source src="css/music.mp3" type="audio/mpeg">
+        Tu navegador no soporta la etiqueta de audio.
+    </audio>
+
+    <script>
+        // Variable para controlar si la música ya ha comenzado
+        let hasPlayed = false;
+
+        window.addEventListener("scroll", function () {
+            // Comprobar si el audio ya se ha reproducido
+            if (!hasPlayed) {
+                var audio = document.getElementById("background-audio");
+                audio.muted = false; // Desmutea el audio
+                audio.play().then(() => {
+                    hasPlayed = true; // Cambia el estado para evitar múltiples reproducciones
+                }).catch((error) => {
+                    console.error("Error al reproducir el audio:", error);
+                });
+            }
+        });
+    </script>
+
+    <!-- Begin Preloader -->
+    <div class="preloader-wrapper">
+        <div class="preloader">
+            <img src="image/favicon.png" alt="Flower" />
+        </div>
+    </div>
+    <!-- End Preloader-->
+    <!-- Begin Header -->
+    <div class="header-wrapper" id="home">
+        <!-- Begin Hero -->
+        <section class="hero is-large">
+            <!-- Begin Mobile Nav -->
+            <nav class="navbar is-transparent is-hidden-desktop">
+                <!-- Begin Burger Menu -->
+                <div class="navbar-brand is-fixed-top">
+                    <div class="navbar-burger burger" data-target="mobile-nav">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <!-- End Burger Menu -->
+                <div id="mobile-nav" class="navbar-menu">
+                    <div class="navbar-end">
+                        <div class="navbar-item">
+                            <a class="navbar-item" href="#Waktu">
+                                Fecha
+                            </a>
+                        </div>
+                        <div class="navbar-item">
+                            <a class="navbar-item" href="#lokasi">
+                                Ubicación
+                            </a>
+                        </div>
+
+                        <div class="navbar-item">
+                            <a class="navbar-item" href="#tentang-sherly-daeng">
+                                Recuerdos de Maria Kamila
+                            </a>
+                        </div>
+                        <div class="navbar-item">
+                            <a class="navbar-item" href="#rsvp">
+                                Confirmar asistencia
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <!-- End Mobile Nav -->
+            <!-- Begin Hero Content-->
+            <div class="hero-body">
+                <div class="container has-text-centered">
+                    <h1 class="subtitle">Acompáñame a mis XV</h1>
+                    <h2 class="title">Victoria</h2>
+                    <h4 class="subtitle tempatwaktu">
+                        Sábado, 19 Julio 2025
+                        </br>
+                        La Foresta
+                        </br>
+                        Vía Calambeo
+                    </h4>
+                </div>
+
+                <!-- Start Countdown -->
+                <div>
+                    <ul id="hitungmundur">
+                        <li><span class="days">00</span>
+                            <p class="days_text">Días</p>
+                        </li>
+                        <li class="separator">:</li>
+                        <li><span class="hours">00</span>
+                            <p class="hours_text">Horas</p>
+                        </li>
+                        <li class="separator">:</li>
+                        <li><span class="minutes">00</span>
+                            <p class="minutes_text">Minutos</p>
+                        </li>
+                        <li class="separator">:</li>
+                        <li><span class="seconds">00</span>
+                            <p class="seconds_text">Segundos</p>
+                        </li>
+                    </ul>
+                    <div class="spasi"></div>
+                    <script type="text/javascript">
+                        var harih = '07/19/2025 17:00:00'; // Fecha y hora del evento
+
+
+
+                        $('#hitungmundur').countdown({
+                            date: harih, // Formato MM/DD/YYYY HH:MM:SS
+                            offset: +7, // Ajusta este valor si deseas modificar la zona horaria
+                            day: 'Día',
+                            days: 'Días'
+                        }, function () {
+                            alert('¡Es hora de celebrar!');
+                        });
+                    </script>
+                </div>
+                <!-- End Countdown -->
+            </div>
+
+            <!-- End Hero Content-->
+            <!-- Begin Hero Menu -->
+            <div class="hero-foot ">
+                <div class="hero-foot--wrapper">
+                    <div class="columns">
+                        <div class="column is-12 hero-menu-desktop has-text-centered">
+                            <ul>
+                                <li class="is-active">
+                                    <a href="#home">Inicio</a>
+                                </li>
+                                <li>
+                                    <a href="#Waktu">Fecha</a>
+                                </li>
+                                <li>
+                                    <a href="#lokasi">Ubicación</a>
+                                </li>
+                                <li>
+                                    <a href="#tentang-sherly-daeng">Recuerdos de Victoria</a>
+                                </li>
+
+                                <li>
+                                    <a href="#rsvp">Confirmar asistencia</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Hero Menu -->
+        </section>
+        <!-- End Hero -->
+    </div>
+    <!-- End Header -->
+
+    <!-- Begin Main Content -->
+    <div class="main-content">
+        <!-- Begin regular-section-->
+        <section class="section-light no-padding-top regular-section has-text-centered has-vertically-aligned-content"
+            id="regular-section">
+            <p class="bodytext" data-aos="fade-up" data-aos-easing="linear">
+                <b>El camino hacia un mundo nuevo comienza esta noche.</b>
+            </p>
+            <p class="bodytext" data-aos="fade-up" data-aos-easing="linear">
+                Un mundo lleno de ilusiones, sueños por cumplir y emociones compartidas.
+                Hoy doy un paso importante que marcará un antes y un después en mi vida,
+                y nada me haría más feliz que contar con tu presencia en este momento inolvidable.
+                <compartirlo class=""></compartirlo>
+            </p>
+
+            <span class="space40px"></span>
+            <span class="space40px"></span>
+
+            <div data-aos="fade-up" data-aos-easing="linear">
+                <div class="nama-lengkap">Acompáñame junto a mi madre,</div>
+                <div class="nama-lengkap-madre">Cristina Barbosa</div>
+                <p class="bodytext" data-aos="fade-up" data-aos-easing="linear">
+                    quien ha sido mi guía, mi fuerza y mi amor incondicional en cada paso de este viaje.
+                </p>
+            </div>
+
+            <span class="space40px"></span>
+
+            <div class="space40px"></div>
+            <div class="space40px"></div>
+
+
+            <span class="space40px"></span>
+            <span class="space40px"></span>
+        </section>
+        <!-- End regular-section-->
+
+        <!-- Begin Waktu Section -->
+        <section class="section-dark" id="Waktu">
+            <div class="container">
+
+                <div class="column is-12 regular-section" data-aos="fade-up" data-aos-easing="linear">
+                    <h1 class="title has-text-centered section-title">Fecha</h1>
+                </div>
+                <div class="columns is-multiline" data-aos="fade-up" data-aos-easing="linear">
+                    <div class="column is-4 has-vertically-aligned-content">
+
+                        <p class="is-larger has-text-centered">
+                        <div class="waktu tanggal-hari has-text-centered">Sábado</div>
+                        <div class="waktu tanggal-angka has-text-centered">19</div>
+                        <div class="waktu tanggal-bulan has-text-centered">Julio 2025</div>
+                        </p>
+
+                    </div>
+                    <div class="column is-4 has-vertically-aligned-content">
+
+                        <p class="waktu is-larger has-text-centered">
+                            Hora del evento:
+                            <br>
+                            <strong>05:00 PM</strong>
+                        </p>
+
+                    </div>
+
+                    <div class="column is-4 has-vertically-aligned-content">
+
+                        <h1 class="waktu is-larger has-text-centered">
+                            Inicio
+                            <br>
+                            <strong>05:30 PM</strong>
+                        </h1>
+
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="space40px"></div>
+            <div class="main-content has-text-centered" data-aos="fade-up" data-aos-easing="linear">
+                <a href="https://calendar.google.com/calendar/r/eventedit?text=Acompáñanos+a+celebrar+los+XV&dates=20250719T220000Z/20250720T030000Z&details=Una+celebración+única+llena+de+alegría%2C+amor+y+recuerdos+inolvidables+para+festejar+los+15+a%C3%B1os+de+vida+de+una+persona+muy+especial.+Te+esperamos+con+todo+el+coraz%C3%B3n+💜&location=La+Foresta+-+V%C3%ADa+Calambeo"
+                    class="button has-tooltip btn-cta" data-tooltip="Agéndalo en tu calendario" target="_blank"
+                    data-aos="zoom-in">
+                    <i class="far fa-calendar-plus"></i>
+                    &nbsp;Calendario
+                </a>
+            </div>
+
+        </section>
+        <!-- End Waktu Content -->
+
+        <!-- Begin Lokasi Section -->
+        <section class="section-darker" id="lokasi">
+            <div class="container">
+                <div class="column is-12 regular-section" data-aos="fade-up" data-aos-easing="linear">
+                    <h1 class="title has-text-centered section-title">Ubicación</h1>
+                    <p class="tempat is-larger has-text-centered">
+                        <strong>La Foresta</strong>
+                        <br>
+                        Vía Calambeo
+                        <br>
+                        Ibagué, Tolima
+                        <br>
+                    </p>
+                </div>
+                <div class="section-map" data-aos="fade-up" data-aos-easing="linear">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3977.7687474546105!2d-75.22988462405901!3d4.454061995520199!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e38c517b3189421%3A0x4cf1bd5fcc201ad3!2sForesta%20Residencial%20-%20Calambeo!5e0!3m2!1ses!2sco!4v1751032212055!5m2!1ses!2sco"
+                        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="space40px"></div>
+                <div class="has-text-centered" data-aos="fade-up" data-aos-easing="linear">
+                    <a href="https://maps.app.goo.gl/Ztyna5gjVbMq3Gno6" class="button btn-cta" target="_blank"
+                        data-aos="zoom-in">
+                        <i class="far fa-directions"></i>
+                        &nbsp;&nbsp;Google Maps
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- End Lokasi Content -->
+
+ <section class="section-light regular-section" id="recuerdos-victoria" style="padding: 3rem 1rem;">
+  <div style="text-align: center; margin-bottom: 2rem;">
+    <h1 style="font-size: 2rem; font-weight: 900; text-transform: uppercase; color: rgba(19, 36, 17, 255);">
+      Recuerdos de Victoria
+    </h1>
+  </div>
+
+  <!-- Carrusel -->
+  <div id="carousel" style="
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 1rem;
+    padding-bottom: 1rem;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  ">
+
+    <!-- Estilo para ocultar scrollbar -->
+    <style>
+      #carousel::-webkit-scrollbar {
+        display: none;
+      }
+      #carousel > div {
+        scroll-snap-align: center;
+        flex-shrink: 0;
+        width: 260px;
+        border-radius: 1rem;
+        overflow: hidden;
+        position: relative;
+        height: 380px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+      }
+      .foto-cover {
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        position: relative;
+        padding: 1rem;
+        color: white;
+        font-weight: bold;
+        font-size: 1.2rem;
+        text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+      }
+    </style>
+
+    <!-- Fotos -->
+    <div>
+      <div class="foto-cover" style="background-image: linear-gradient(rgba(87,2,95,0.5), rgba(48,47,47,0.9)), url('image/img1.jpeg');">
+        2010
+      </div>
+    </div>
+
+    <div>
+      <div class="foto-cover" style="background-image: linear-gradient(rgba(87,2,95,0.5), rgba(48,47,47,0.9)), url('image/img2.jpeg');">
+        2012
+      </div>
+    </div>
+
+    <div>
+      <div class="foto-cover" style="background-image: linear-gradient(rgba(87,2,95,0.5), rgba(48,47,47,0.9)), url('image/img3.jpeg'); background-position: top center;">
+        2015
+      </div>
+    </div>
+
+    <div>
+      <div class="foto-cover" style="background-image: linear-gradient(rgba(87,2,95,0.5), rgba(48,47,47,0.9)), url('image/img4.jpeg');">
+        2017
+      </div>
+    </div>
+
+    <div>
+      <div class="foto-cover" style="background-image: linear-gradient(rgba(87,2,95,0.5), rgba(48,47,47,0.9)), url('image/img5.jpeg'); background-position: top center;">
+        2024
+      </div>
+    </div>
+
+    <div>
+      <div class="foto-cover" style="background-image: linear-gradient(rgba(87,2,95,0.5), rgba(48,47,47,0.9)), url('image/img6.jpeg');">
+        2025
+      </div>
+    </div>
+
+  </div><!-- IMAGES -->
+<div class="space40px"></div>
+<div class="space40px"></div>
+<div class="space40px"></div>
+
+<div class="space40px"></div>
+<div class="space40px"></div>
+
+  <!-- Autoplay JS -->
+
+</section>
+
+
+
+        <!-- End Tentang Sherly dan Daeng -->
+
+        <!-- Begin RSVP Content -->
+        <section class="section-dark contact" id="rsvp">
+            <div class="container">
+                <div class="columns is-multiline">
+                    <div class="column is-12 prolog">
+                        <h1 class="title has-text-centered section-title" data-aos="fade-up" data-aos-easing="linear">
+                            Confirma tu asistencia</h1>
+                    </div>
+                    <div class="column is-12 prolog has-text-centered" data-aos="fade-up" data-aos-easing="linear">
+                        <p class="h2 subtitle" data-aos="fade-up" data-aos-easing="linear">
+                            Es un honor y una gran alegría que estés dispuest@ a acompañarnos<br>
+                            en este momento tan especial.<br><br>
+                            <strong style="font-size: 1.5em;">Código de vestimenta</strong>
+                        </p>
+
+                        <!-- Tabla de vestimenta -->
+                        <div style="overflow-x: auto; display: flex; justify-content: center; margin: 2rem 0;">
+                            <table
+                                style="min-width: 300px; max-width: 600px; width: 100%; border-collapse: collapse; border-radius: 12px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.1); background: white;">
+                                <tbody style="font-size: 1rem; color: #132411;">
+                                    <tr
+                                        style="border-bottom: 1px solid #f4e2f3; background-color: rgba(255,255,255,0.9);">
+                                        <td
+                                            style="padding: 1rem; font-size: 2.5rem; text-align: center; vertical-align: middle;">
+                                            👗</td>
+                                        <td style="padding: 1rem; vertical-align: middle;">Con tu mejor vestido</td>
+                                    </tr>
+                                    <tr style="border-bottom: 1px solid #f4e2f3; background-color: #f4e2f3;">
+                                        <td
+                                            style="padding: 1rem; font-size: 2.5rem; text-align: center; vertical-align: middle;">
+                                            🕴️</td>
+                                        <td style="padding: 1rem; vertical-align: middle;">Recomendamos un look fresco y
+                                            elegante</td>
+                                    </tr>
+                                    <tr style="background-color: rgba(255,255,255,0.9);">
+                                        <td
+                                            style="padding: 1rem; font-size: 2.5rem; text-align: center; vertical-align: middle;">
+                                            💜</td>
+                                        <td style="padding: 1rem; vertical-align: middle;"><strong>Nos reservamos el
+                                                color <span
+                                                    style="color: #996d97;font-size: 1.3rem;">Lila</span></strong></td>
+                                    </tr>
+                                    <tr style="border-top: 1px solid #f4e2f3; background-color: #f4e2f3;">
+                                        <td
+                                            style="padding: 1rem; font-size: 2.5rem; text-align: center; vertical-align: middle;">
+                                            ✉️</td>
+                                        <td style="padding: 1rem; vertical-align: middle;">Lluvia de sobres</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Botón Confirmar -->
+                        <a href="#" class="button btn-whatsapp" target="_blank" data-aos="zoom-in"
+                            onclick="openModal()">
+                            <i class="fab fa-whatsapp"></i>
+                            &nbsp;&nbsp;Confirmar
+                        </a>
+                        <p>Recuerda indicarnos si asistras con acompañante.</p>
+
+                        <div class="space40px"></div>
+                        <div class="space40px"></div>
+
+                        <h2 class="subtitle" data-aos="fade-up" data-aos-easing="linear">Con cariño de mi madre</h2>
+                        <p class="h2 subtitle" data-aos="fade-up" data-aos-easing="linear">
+                            <strong style="font-size: 1.4em;">Cristina Barbosa</strong><br>
+                            <a href="#" target="_blank"
+                                style="color: #132411; font-size: 1.25rem; font-weight: 900; margin-top: 0.5rem; display: inline-block; vertical-align: middle; text-align: center; padding: 10px;">
+                                <i class="fab fa-instagram"></i> @Cristana
+                            </a>
+                        </p>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </section>
+        <!-- End RSVP Content -->
+    </div>
+    <!-- End Main Content -->
+
+    <!-- Scripts -->
+    <script src="js/menikah.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            easing: "ease-out",
+            duration: 800,
+        });
+    </script>
+</body>
+
+</html>
